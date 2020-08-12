@@ -2,6 +2,7 @@ package it.dav.demo.service;
 
 import it.dav.demo.model.Person;
 import it.dav.demo.repository.PersonRepository;
+import it.dav.demo.rest.dto.PersonDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class TestService {
     private void init(){
         List<Person> people = personRepository.findAll();
         if(people.size() < 1){
-            Person p = Person.builder().name("John Doe").build();
+            Person p = Person.builder().name("John").surname("Doe").build();
             personRepository.save(p);
         }
     }
@@ -28,4 +29,8 @@ public class TestService {
     }
 
 
+    public PersonDTO addPerson(PersonDTO dto) {
+        Person toAdd = Person.builder().name(dto.getName()).surname(dto.getSurname()).build();
+        return PersonDTO.from(personRepository.save(toAdd));
+    }
 }

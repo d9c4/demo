@@ -19,4 +19,7 @@ public class Person {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "surname", nullable = false)
+    private String surname;
 }
