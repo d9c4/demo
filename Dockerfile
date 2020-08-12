@@ -7,4 +7,4 @@ COPY pom.xml /usr/src/demo
 RUN mvn -f /usr/src/demo/pom.xml clean package -U -Dmaven.test.skip=true
 
 EXPOSE 8085
-ENTRYPOINT ["java", "-jar", "/usr/src/crixp-pillar-1-anagrafica/target/demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/usr/src/demo/target/demo-0.0.1-SNAPSHOT.jar"]
