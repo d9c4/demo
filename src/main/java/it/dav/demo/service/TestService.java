@@ -24,8 +24,8 @@ public class TestService {
         }
     }
 
-    public String findAllPeople(){
-        return personRepository.findAll().stream().map(Person::getName).collect(Collectors.joining());
+    public List<PersonDTO> findAllPeople(){
+        return personRepository.findAll().stream().map(PersonDTO::from).collect(Collectors.toList());
     }
 
 
