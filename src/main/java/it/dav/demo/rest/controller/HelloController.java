@@ -29,6 +29,6 @@ public class HelloController {
 
     @GetMapping(path = "/hello")
     public ResponseEntity<String> hello(){
-        return ResponseEntity.ok("HELLO!");
+        return ResponseEntity.ok("HELLO WORLD!");
     }
 }
