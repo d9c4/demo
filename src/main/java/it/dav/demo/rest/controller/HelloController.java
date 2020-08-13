@@ -26,4 +26,9 @@ public class HelloController {
     public ResponseEntity<PersonDTO> add(@RequestBody PersonDTO dto){
         return ResponseEntity.ok().body(testService.addPerson(dto));
     }
+
+    @GetMapping(path = "/hello")
+    public ResponseEntity<String> hello(){
+        return ResponseEntity.ok("HELLO!");
+    }
 }
