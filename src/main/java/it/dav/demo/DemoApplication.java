@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		log.info("VERSION {}", 1);
+		log.info("VERSION {}", 2);
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
